@@ -1,0 +1,113 @@
+# Held-out literature benchmarks for INDEPENDENT external validation of the
+# ICI-thyroid QSP model's EMERGENT (non-calibrated) outputs.
+#
+# Every entry is from a study that was NOT used to calibrate the model. The four
+# calibration sources below are excluded; no benchmark here uses their data.
+# Acceptance bands are the reported 95% CI or IQR from the source (per-endpoint).
+#
+# model_key resolves into the emergent values extracted by
+# external_benchmark_validation.py (hyper_pct/seroconv_pct/biphasic_overall/
+# thyrotoxic_onset_weeks/hypo_onset_weeks/rr_pd1_vs_pdl1_hyper, ...).
+
+_note: "Held-out clinical benchmarks (independent of calibration). Bands are reported CI/IQR."
+excluded_calibration_refs:
+  - "Barroso-Sousa 2018 JAMA Oncol 4(2):173-182 (PMID 28973656)"
+  - "de Filette 2016 JCEM 101(11):4431-4439 (PMID 27270715)"
+  - "Osorio 2017 Ann Oncol 28(3):583-589 (PMID 27998967)"
+  - "Barroso-Sousa 2018 Cancer 124(6):1111-1121 (PMID 29338085)"
+
+literature_endpoints:
+  # --- E-L1: hyperthyroidism/thyrotoxicosis incidence by class (emergent) ---
+  - id: L1a_hyperthyroidism_PD1
+    description: "Thyrotoxicosis incidence, anti-PD-1 monotherapy (model class hyper %)"
+    model_key: hyper_pct.PD-1
+    benchmark_low: 5.2
+    benchmark_high: 10.7
+    benchmark_point: 7.5
+    source: "Kim et al., Endocrinol Metab (Seoul) 2023 (meta-analysis, 25 studies, 2799 pts)"
+    ref_id: "PMID:37956967 / doi:10.3803/EnM.2023.1785"
+    note: "Held-out meta-analysis; not a calibration source."
+
+  - id: L1b_hyperthyroidism_PDL1
+    description: "Thyrotoxicosis incidence, anti-PD-L1 monotherapy"
+    model_key: hyper_pct.PD-L1
+    benchmark_low: 3.1
+    benchmark_high: 4.6
+    benchmark_point: 3.8
+    source: "Kim et al., Endocrinol Metab (Seoul) 2023 (48 studies, 13394 pts)"
+    ref_id: "PMID:37956967"
+    note: "Largest class-specific pooled estimate."
+
+  - id: L1c_hyperthyroidism_CTLA4
+    description: "Thyrotoxicosis incidence, anti-CTLA-4 monotherapy (sparse benchmark)"
+    model_key: hyper_pct.CTLA-4
+    benchmark_low: 0.9
+    benchmark_high: 16.5
+    benchmark_point: 4.1
+    source: "Kim et al., Endocrinol Metab (Seoul) 2023 (only 4 studies, 198 pts)"
+    ref_id: "PMID:37956967"
+    note: "LOW CONFIDENCE: CI 0.9-16.5% is very wide; weak discriminating benchmark."
+
+  - id: L1d_hyperthyroidism_combination
+    description: "Thyrotoxicosis incidence, PD-(L)1 + CTLA-4 combination"
+    model_key: hyper_pct.Combination
+    benchmark_low: 3.8
+    benchmark_high: 9.0
+    benchmark_point: 5.9
+    source: "Kim et al., Endocrinol Metab (Seoul) 2023 (8 studies, 1846 pts)"
+    ref_id: "PMID:37956967"
+    note: "Combination category (anti-PD-(L)1 + anti-CTLA-4)."
+
+  # --- E-L2: biphasic proportion (emergent) ---
+  - id: L2_biphasic_overall
+    description: "Fraction of thyroid dysfunction cases with a thyrotoxic phase preceding hypothyroidism (model, all classes, weighted)"
+    model_key: biphasic_overall
+    benchmark_low: 28.0
+    benchmark_high: 74.0
+    benchmark_point: 50.0
+    source: "Park 2020 EnM (28-44%), Muir 2021 JCEM (29% all-thyrotoxicosis; 59% overt), adjuvant cohort 2024 (74%)"
+    ref_id: "PMID:33176419 / PMID:33726961 / PMID:38598052"
+    note: "Wide clinical range depends on denominator (all vs overt thyrotoxicosis). Band spans the denominator-consistent estimates."
+
+  # --- E-L3: TPOAb seroconversion in monotherapy (emergent) ---
+  - id: L3_seroconversion_PD1
+    description: "New TPOAb seroconversion during anti-PD-1 therapy (model PD-1 class)"
+    model_key: seroconv_pct.PD-1
+    benchmark_low: 8.0
+    benchmark_high: 28.0
+    benchmark_point: 13.0
+    source: "Muir 2022 JCEM (new TPOAb ~13%), Kobayashi 2018 (8.3% seroconversion), Ohno 2020 BJC"
+    ref_id: "PMID:35104870 / PMID:29600292 / PMID:32009131"
+    note: "Seroconversion of initially antibody-negative patients. Monotherapy only (combination model value is a known artifact, excluded)."
+
+  # --- E-L4: onset timing (emergent within the calibrated 60-140 d window) ---
+  - id: L4a_thyrotoxic_onset_weeks
+    description: "Median thyrotoxic-phase onset, earliest (combination) class (weeks from ICI start)"
+    model_key: thyrotoxic_onset_weeks.Combination
+    benchmark_low: 2.0
+    benchmark_high: 8.0
+    benchmark_point: 5.0
+    source: "Muir 2021 JCEM (overt thyrotoxicosis median 5 wk, IQR 2-8)"
+    ref_id: "PMID:33726961"
+    note: "Model thyrotoxic onset tends to run late vs the ~5 wk clinical median."
+
+  - id: L4b_hypothyroid_onset_weeks
+    description: "Median hypothyroid onset, PD-1 class (weeks from ICI start)"
+    model_key: hypo_onset_weeks.PD-1
+    benchmark_low: 8.0
+    benchmark_high: 25.0
+    benchmark_point: 14.0
+    source: "Muir 2021 JCEM (overt hypothyroidism median 14 wk, IQR 8-25)"
+    ref_id: "PMID:33726961"
+    note: "Consistent with Iyer 2018 (10.4 wk) and Park 2020 (~3 mo)."
+
+  # --- E-L5: PD-1 vs PD-L1 hyperthyroidism relative risk (emergent) ---
+  - id: L5_rr_pd1_vs_pdl1_hyper
+    description: "PD-1 vs PD-L1 thyrotoxicosis relative risk (model emergent RR vs meta-analytic implied ratio)"
+    model_key: rr_pd1_vs_pdl1_hyper
+    benchmark_low: 1.5
+    benchmark_high: 2.6
+    benchmark_point: 2.0
+    source: "Kim 2023 EnM (PD-1 7.5% vs PD-L1 3.8% -> implied ~2.0x, non-overlapping CIs)"
+    ref_id: "PMID:37956967"
+    note: "Direction and magnitude of the emergent hyper RR."

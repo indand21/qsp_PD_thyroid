@@ -1,0 +1,89 @@
+# =============================================================================
+# v1 Pipeline Configuration
+# =============================================================================
+# Scale/runtime knobs for the "v1 manuscript objectives" execution pipeline
+# (scripts/run_v1_pipeline.py and the individual scripts/{analysis,sensitivity,
+# cohorts,population,validation,ml,figures} scripts).
+#
+# Defaults below are REDUCED-BUT-REAL: every stage executes end-to-end and
+# produces genuine outputs in reasonable wall-clock time. To reproduce the
+# literal magnitudes quoted in the v1 manuscript, switch to the `full_scale`
+# values noted in each comment (expect multi-hour runs).
+#
+# NOTE: outputs generated from these settings are IN-SILICO / SYNTHETIC and are
+# not derived from real patient data. See results/v1/README.md.
+# =============================================================================
+
+seed: 12345                     # global RNG seed for reproducibility
+
+# --- Population / incidence simulation -------------------------------------
+population:
+  n_per_drug: 1000              # patients simulated per drug (full_scale: 500-1000);
+                                # >=300 keeps calibrated low-incidence estimates/ordering stable
+  t_span_days: 180              # simulation horizon per patient
+  drugs:                        # PD-1 / PD-L1 / CTLA-4 monotherapies
+    - nivolumab
+    - pembrolizumab
+    - atezolizumab
+    - durvalumab
+    - ipilimumab
+  regimens:                     # combination regimens (multi-drug)
+    - nivolumab_ipilimumab
+  drug_classes:                 # class aggregation for reporting
+    PD-1:   [nivolumab, pembrolizumab]
+    PD-L1:  [atezolizumab, durvalumab]
+    CTLA-4: [ipilimumab]
+    Combination: [nivolumab_ipilimumab]
+
+# --- Global sensitivity analysis (SALib) -----------------------------------
+sensitivity:
+  n_morris_trajectories: 500    # Morris trajectories (full_scale: 500)
+  morris_levels: 4
+  n_sobol_base: 1024            # Sobol base sample; total = N*(2D+2) (full_scale: 1024+)
+  n_patients_per_eval: 100      # patients averaged per parameter set (full_scale: 100+)
+
+# --- Synthetic cohorts ------------------------------------------------------
+cohorts:
+  calibration_n: 150            # in-silico calibration cohort size
+  external_n: 247               # in-silico external-validation cohort size
+  external_centers: 3           # covariate strata standing in for "centers"
+  visit_weeks: [0, 6, 12, 24, 52]   # serial biomarker sampling schedule
+  measurement_noise_cv: 0.10    # lognormal measurement-noise CV on biomarkers
+
+# --- Virtual population (Python NLME-style sampler) ------------------------
+virtual_population:
+  n_patients: 1000              # virtual patients (full_scale: 1000)
+  n_monte_carlo: 10000          # MC resamples for CIs (full_scale: 10000)
+  bsv_cv: 0.25                  # between-subject variability CV on random effects
+  risk_tiers:                   # dysfunction-probability cut points
+    high: 0.60
+    intermediate: 0.30
+
+# --- Machine learning ensemble ---------------------------------------------
+ml:
+  cv_folds: 10
+  cv_repeats: 5                 # (full_scale: 5)
+  hpo_trials: 50                # optuna Bayesian-HPO evaluations (full_scale: 50)
+  rf_n_estimators: 500          # (full_scale: 500)
+  xgb_n_estimators: 200
+  lgbm_n_estimators: 150
+
+# --- External validation (held-out benchmarks) -----------------------------
+# Independent external validation of the model's EMERGENT (non-calibrated)
+# outputs against held-out published literature and real-world FDA FAERS
+# pharmacovigilance. FAERS is spontaneous reporting (disproportionality, not
+# incidence); combination regimens are not isolable in FAERS and are omitted.
+external_validation:
+  faers_drugs:                  # ICI generic names queried in openFDA
+    nivolumab: PD-1
+    pembrolizumab: PD-1
+    atezolizumab: PD-L1
+    durvalumab: PD-L1
+    ipilimumab: CTLA-4
+  literature_benchmarks_file: external_benchmarks/literature_targets.yaml
+  # openFDA needs network access; set FDA_API_KEY env var for a higher rate limit.
+
+# --- Output ----------------------------------------------------------------
+output:
+  root: results/v1              # all generated artifacts land here
+  figure_dpi: 200

@@ -1,0 +1,3018 @@
+# QSP_PD_Thyroid_Final - Development Requirements
+# This file contains additional packages required for development, testing, and documentation
+
+# Include base requirements
+-r requirements.txt
+
+# Testing framework
+pytest>=6.2.0,<8.0.0
+pytest-cov>=2.12.0,<5.0.0
+pytest-xdist>=2.3.0,<4.0.0
+pytest-benchmark>=3.4.0,<5.0.0
+pytest-profiling>=1.7.0,<4.0.0
+pytest-sugar>=0.9.4,<1.0.0
+pytest-clarity>=0.3.0,<2.0.0
+pytest-mock>=3.6.0,<4.0.0
+pytest-html>=3.1.0,<4.0.0
+pytest-metadata>=1.11.0,<4.0.0
+pytest-env>=0.6.0,<2.0.0
+pytest-randomly>=3.8.0,<4.0.0
+pytest-repeat>=0.9.0,<2.0.0
+pytest-rerunfailures>=10.0,<13.0.0
+pytest-timeout>=1.4.0,<3.0.0
+pytest-parallel>=0.1.0,<1.0.0
+pytest-bdd>=4.0.0,<7.0.0
+pytest-variables>=1.9.0,<3.0.0
+pytest-localserver>=0.5.0,<2.0.0
+pytest-selenium>=2.0.0,<5.0.0
+pytest-base-url>=1.4.0,<3.0.0
+pytest-forked>=1.3.0,<2.0.0
+pytest-mpl>=0.13.0,<1.0.0
+pytest-socket>=0.5.0,<1.0.0
+pytest-vcr>=1.0.0,<3.0.0
+pytest-checklinks>=0.7.0,<1.0.0
+
+# Code quality and formatting
+black>=21.6.0,<24.0.0
+flake8>=3.9.0,<7.0.0
+mypy>=0.910,<2.0.0
+isort>=5.9.0,<6.0.0
+pydocstyle>=6.1.0,<7.0.0
+bandit>=1.7.0,<2.0.0
+safety>=1.10.0,<3.0.0
+pipdeptree>=2.0.0,<3.0.0
+
+# Pre-commit hooks
+pre-commit>=2.13.0,<4.0.0
+
+# Documentation
+sphinx>=4.0.0,<8.0.0
+sphinx-rtd-theme>=0.5.0,<3.0.0
+myst-parser>=0.15.0,<3.0.0
+sphinx-autodoc-typehints>=1.12.0,<2.0.0
+sphinx-click>=3.0.0,<5.0.0
+sphinx-tabs>=3.2.0,<5.0.0
+sphinx-copybutton>=0.4.0,<1.0.0
+sphinx-panels>=0.6.0,<2.0.0
+nbsphinx>=0.8.0,<1.0.0
+sphinxcontrib-bibtex>=2.4.0,<3.0.0
+sphinxext-opengraph>=0.6.0,<1.0.0
+sphinxemoji>=0.2.0,<1.0.0
+sphinx-sitemap>=2.5.0,<4.0.0
+sphinx-lint>=0.4.0,<1.0.0
+sphinx-automodapi>=0.13.0,<1.0.0
+sphinx-book-theme>=0.1.0,<2.0.0
+jupyter-book>=0.12.0,<1.0.0
+
+# Jupyter and notebooks
+jupyter>=1.0.0,<2.0.0
+jupyterlab>=3.1.4,<5.0.0
+jupyter-client>=6.1.0,<9.0.0
+jupyter-core>=4.7.0,<6.0.0
+ipython>=7.25.0,<9.0.0
+ipykernel>=6.0.0,<7.0.0
+notebook>=6.4.0,<8.0.0
+nbconvert>=6.1.0,<8.0.0
+nbformat>=5.1.0,<6.0.0
+papermill>=2.3.0,<3.0.0
+
+# Performance profiling
+memory-profiler>=0.60.0,<1.0.0
+line-profiler>=3.3.0,<5.0.0
+py-spy>=0.3.0,<1.0.0
+
+# Data validation and testing
+great-expectations>=0.13.0,<1.0.0
+pandera>=0.9.0,<1.0.0
+
+# Statistical analysis for testing
+scipy>=1.7.0,<2.0.0
+statsmodels>=0.12.0,<2.0.0
+pingouin>=0.5.0,<1.0.0
+
+# Bayesian analysis for testing
+pymc3>=3.11.0,<4.0.0
+arviz>=0.11.0,<1.0.0
+
+# Sensitivity analysis
+SALib>=1.4.0,<2.0.0
+
+# Optimization for testing
+optuna>=2.10.0,<4.0.0
+hyperopt>=0.2.0,<1.0.0
+
+# Machine learning explainability
+shap>=0.39.0,<1.0.0
+eli5>=0.11.0,<1.0.0
+
+# Web frameworks for testing APIs
+fastapi>=0.68.0,<1.0.0
+uvicorn>=0.15.0,<1.0.0
+pydantic>=2.7,<3.0.0
+
+# Database testing
+sqlalchemy>=1.4.0,<3.0.0
+alembic>=1.6.0,<2.0.0
+
+# Task queue testing
+redis>=3.5.0,<5.0.0
+celery>=5.2.0,<6.0.0
+
+# Security testing
+cryptography>=3.4.0,<45.0.0
+bcrypt>=3.2.0,<5.0.0
+paramiko>=2.7.0,<4.0.0
+
+# Configuration management
+python-dotenv>=0.19.0,<2.0.0
+configparser>=5.0.0,<7.0.0
+
+# Logging and monitoring
+structlog>=21.1.0,<24.0.0
+prometheus-client>=0.11.0,<1.0.0
+
+# Build and packaging
+build>=0.7.0,<1.0.0
+twine>=3.4.0,<5.0.0
+wheel>=0.36.0,<1.0.0
+setuptools>=60.0.0,<70.0.0
+
+# Version management
+bump2version>=1.0.0,<2.0.0
+semantic-version>=2.8.0,<3.0.0
+
+# Documentation tools
+mkdocs>=1.2.0,<2.0.0
+mkdocs-material>=7.2.0,<10.0.0
+mkdocs-mermaid2-plugin>=0.5.0,<2.0.0
+
+# Spell checking
+pyspelling>=2.6.0,<3.0.0
+
+# Link checking
+markdown-link-check>=3.8.0,<4.0.0
+
+# License checking
+licensecheck>=3.0.0,<4.0.0
+
+# Dependency checking
+pip-audit>=2.0.0,<3.0.0
+
+# Git tools
+gitpython>=3.1.0,<4.0.0
+gitdb>=4.0.0,<5.0.0
+
+# Text processing
+regex>=2021.7.0,<2024.0.0
+fuzzywuzzy>=0.18.0,<1.0.0
+python-levenshtein>=0.12.0,<1.0.0
+
+# Image processing for documentation
+pillow>=8.3.0,<11.0.0
+
+# Data export formats
+xlsxwriter>=3.0.0,<4.0.0
+openpyxl>=3.0.0,<4.0.0
+python-docx>=0.8.11,<1.0.0
+
+# HTTP clients for testing
+httpx>=0.23.0,<1.0.0
+aiohttp>=3.7.0,<4.0.0
+
+# Async testing
+pytest-asyncio>=0.15.0,<1.0.0
+anyio>=3.3.0,<5.0.0
+
+# Environment variables testing
+python-decouple>=3.5.0,<4.0.0
+
+# Time and date testing
+freezegun>=1.1.0,<2.0.0
+dateparser>=1.1.0,<2.0.0
+
+# File and path testing
+pathlib2>=2.3.0,<3.0.0; python_version < "3.4"
+
+# Type checking extensions
+types-requests>=2.25.0,<3.0.0
+types-PyYAML>=5.4.0,<7.0.0
+types-setuptools>=57.0.0,<70.0.0
+
+# Development utilities
+watchdog>=2.1.0,<4.0.0
+colorama>=0.4.4,<1.0.0
+click>=8.0.0,<9.0.0
+tqdm>=4.61.0,<5.0.0
+rich>=10.0.0,<14.0.0
+typer>=0.4.0,<1.0.0
+
+# Debugging
+ipdb>=0.13.0,<1.0.0
+pdb++>=0.10.0,<1.0.0
+pudb>=2021.1.0,<2024.0.0
+
+# Memory debugging
+pympler>=0.9.0,<1.0.0
+objgraph>=3.4.0,<4.0.0
+
+# Concurrency testing
+concurrent-futures>=3.1.0,<4.0.0
+threadpoolctl>=2.2.0,<4.0.0
+
+# Numerical testing
+numpy>=1.21.0,<2.0.0
+pandas>=1.3.0,<2.0.0
+scipy>=1.7.0,<2.0.0
+
+# Plotting for testing
+matplotlib>=3.4.2,<4.0.0
+seaborn>=0.11.1,<1.0.0
+plotly>=5.0.0,<6.0.0
+
+# Data validation
+cerberus>=1.3.0,<2.0.0
+jsonschema>=3.2.0,<5.0.0
+marshmallow>=3.12.0,<4.0.0
+
+# Template engines for testing
+jinja2>=3.0.0,<4.0.0
+mako>=1.1.0,<2.0.0
+
+# Caching for testing
+redis>=3.5.0,<5.0.0
+diskcache>=5.4.0,<7.0.0
+
+# Compression for testing
+lz4>=3.1.0,<5.0.0
+zstandard>=0.15.0,<1.0.0
+
+# Serialization for testing
+pickle5>=0.0.11,<1.0.0; python_version < "3.8"
+dill>=0.3.0,<1.0.0
+cloudpickle>=2.0.0,<3.0.0
+
+# Network testing
+socketserver>=1.0.0,<2.0.0
+websockets>=9.1.0,<13.0.0
+
+# Email testing
+aiosmtplib>=1.1.0,<3.0.0
+yagmail>=0.14.0,<1.0.0
+
+# Database testing
+sqlite3>=2.6.0,<3.0.0; python_version < "3.0"
+psycopg2-binary>=2.9.0,<3.0.0
+pymongo>=3.12.0,<5.0.0
+
+# Cloud storage testing
+boto3>=1.17.0,<2.0.0
+google-cloud-storage>=1.42.0,<3.0.0
+azure-storage-blob>=12.8.0,<13.0.0
+
+# Message queue testing
+pika>=1.2.0,<2.0.0
+kombu>=5.0.0,<6.0.0
+
+# Search testing
+whoosh>=2.7.0,<3.0.0
+elasticsearch>=7.14.0,<9.0.0
+
+# Monitoring and metrics
+statsd>=3.3.0,<5.0.0
+datadog>=0.44.0,<1.0.0
+
+# Security scanning
+bandit>=1.7.0,<2.0.0
+safety>=1.10.0,<3.0.0
+semgrep>=0.100.0,<2.0.0
+
+# Code complexity
+radon>=5.1.0,<7.0.0
+xenon>=0.9.0,<1.0.0
+mccabe>=0.6.0,<1.0.0
+
+# Import analysis
+isort>=5.9.0,<6.0.0
+import-linter>=1.2.0,<2.0.0
+
+# Dead code detection
+vulture>=2.3.0,<3.0.0
+dead>=1.5.0,<2.0.0
+
+# Documentation coverage
+docstr-coverage>=2.0.0,<3.0.0
+
+# Performance monitoring
+py-spy>=0.3.0,<1.0.0
+py-spy>=0.3.0,<1.0.0
+scalene>=1.3.0,<2.0.0
+
+# Profiling
+line-profiler>=3.3.0,<5.0.0
+memory-profiler>=0.60.0,<1.0.0
+pyinstrument>=4.0.0,<5.0.0
+
+# Benchmarking
+pytest-benchmark>=3.4.0,<5.0.0
+perf>=1.6.0,<2.0.0
+
+# Load testing
+locust>=2.0.0,<3.0.0
+bokeh>=2.4.0,<4.0.0
+
+# A/B testing
+abpy>=0.2.0,<1.0.0
+
+# Feature flags
+flipper>=1.0.0,<2.0.0
+
+# Experiment tracking
+mlflow>=1.20.0,<3.0.0
+wandb>=0.12.0,<1.0.0
+
+# Model serving
+bentoml>=1.0.0,<2.0.0
+seldon-core>=1.12.0,<2.0.0
+
+# Data versioning
+dvc>=2.0.0,<4.0.0
+git-lfs>=2.13.0,<4.0.0
+
+# Pipeline orchestration
+prefect>=1.0.0,<3.0.0
+dagster>=0.14.0,<2.0.0
+
+# Notebooks testing
+nbval>=0.9.0,<1.0.0
+nbmake>=1.0.0,<2.0.0
+
+# Code generation
+jinja2>=3.0.0,<4.0.0
+mako>=1.1.0,<2.0.0
+
+# AST manipulation
+astroid>=2.5.0,<3.0.0
+parso>=0.8.0,<1.0.0
+
+# Refactoring tools
+rope>=0.19.0,<1.0.0
+autopep8>=1.5.0,<2.0.0
+
+# Code formatting plugins
+black>=21.6.0,<24.0.0
+isort>=5.9.0,<6.0.0
+autoflake>=1.4.0,<2.0.0
+
+# Documentation generation
+pdoc3>=0.9.0,<1.0.0
+pydoc-markdown>=4.0.0,<5.0.0
+
+# API documentation
+apispec>=5.0.0,<7.0.0
+connexion>=2.8.0,<3.0.0
+
+# Interactive documentation
+mkdocs>=1.2.0,<2.0.0
+mkdocs-material>=7.2.0,<10.0.0
+mkdocs-mermaid2-plugin>=0.5.0,<2.0.0
+
+# Static site generation
+gunicorn>=20.1.0,<22.0.0
+whitenoise>=5.3.0,<7.0.0
+
+# Development server
+werkzeug>=2.0.0,<3.0.0
+flask>=2.0.0,<3.0.0
+
+# Testing utilities
+factory-boy>=3.2.0,<4.0.0
+faker>=8.1.0,<20.0.0
+hypothesis>=6.14.0,<7.0.0
+
+# Mock data generation
+mimesis>=5.0.0,<7.0.0
+fake2db>=1.3.0,<2.0.0
+
+# Property-based testing
+hypothesis>=6.14.0,<7.0.0
+quickcheck>=2.8.0,<3.0.0
+
+# Contract testing
+pact-python>=1.7.0,<2.0.0
+
+# Load testing
+locust>=2.0.0,<3.0.0
+bokeh>=2.4.0,<4.0.0
+
+# Chaos engineering
+chaostoolkit>=1.0.0,<2.0.0
+
+# Security testing
+owasp-zap>=2.9.0,<3.0.0
+nmap>=6.0.0,<8.0.0
+
+# Container testing
+docker>=5.0.0,<7.0.0
+testcontainers>=3.0.0,<4.0.0
+
+# Kubernetes testing
+kubernetes>=18.0.0,<27.0.0
+kubernetes-client>=18.0.0,<27.0.0
+
+# Cloud testing
+boto3>=1.17.0,<2.0.0
+google-cloud>=0.34.0,<1.0.0
+azure>=4.0.0,<6.0.0
+
+# Integration testing
+testinfra>=6.0.0,<8.0.0
+robot-framework>=4.0.0,<7.0.0
+
+# UI testing
+selenium>=4.0.0,<5.0.0
+playwright-python>=1.20.0,<2.0.0
+
+# Accessibility testing
+axe-core>=4.0.0,<5.0.0
+pa11y>=5.0.0,<7.0.0
+
+# Performance testing
+locust>=2.0.0,<3.0.0
+bokeh>=2.4.0,<4.0.0
+
+# Monitoring and observability
+prometheus-client>=0.11.0,<1.0.0
+statsd>=3.3.0,<5.0.0
+
+# Logging and tracing
+structlog>=21.1.0,<24.0.0
+opentelemetry-api>=1.0.0,<2.0.0
+
+# Error tracking
+sentry-sdk>=1.0.0,<2.0.0
+rollbar>=0.16.0,<1.0.0
+
+# Health checks
+healthcheck>=1.3.0,<2.0.0
+django-health-check>=3.0.0,<4.0.0
+
+# Metrics collection
+collectd>=5.12.0,<6.0.0
+telegraf>=1.19.0,<2.0.0
+
+# Alerting
+alertmanager>=0.21.0,<1.0.0
+pagerduty>=4.0.0,<6.0.0
+
+# Visualization
+grafana-api>=1.0.0,<2.0.0
+kibana-api>=7.0.0,<9.0.0
+
+# Data pipeline testing
+airflow>=2.0.0,<3.0.0
+luigi>=3.0.0,<4.0.0
+
+# Stream processing
+kafka-python>=2.0.0,<3.0.0
+pulsar-client>=2.7.0,<4.0.0
+
+# Message queue testing
+pika>=1.2.0,<2.0.0
+kombu>=5.0.0,<6.0.0
+
+# Database migrations
+alembic>=1.6.0,<2.0.0
+flyway>=7.0.0,<10.0.0
+
+# Schema validation
+cerberus>=1.3.0,<2.0.0
+jsonschema>=3.2.0,<5.0.0
+marshmallow>=3.12.0,<4.0.0
+
+# Data transformation
+pandas>=1.3.0,<2.0.0
+polars>=0.13.0,<1.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Machine learning testing
+scikit-learn>=0.24.2,<2.0.0
+xgboost>=1.4.0,<3.0.0
+lightgbm>=3.2.0,<5.0.0
+
+# Deep learning testing
+tensorflow>=2.6.0,<3.0.0
+torch>=1.9.0,<3.0.0
+keras>=2.6.0,<3.0.0
+
+# Model serving testing
+tensorflow-serving>=2.6.0,<3.0.0
+torchserve>=0.3.0,<1.0.0
+
+# Feature engineering
+featuretools>=0.27.0,<2.0.0
+tsfresh>=0.19.0,<2.0.0
+
+# Time series testing
+prophet>=1.0.0,<2.0.0
+statsforecast>=0.7.0,<2.0.0
+
+# Geospatial testing
+geopandas>=0.9.0,<1.0.0
+shapely>=1.7.0,<3.0.0
+
+# Network analysis
+networkx>=2.6.0,<4.0.0
+igraph>=0.9.0,<1.0.0
+
+# Graph processing
+graph-tool>=2.45.0,<3.0.0
+pygraphviz>=1.7.0,<2.0.0
+
+# Natural language processing
+nltk>=3.6.0,<4.0.0
+spacy>=3.2.0,<4.0.0
+transformers>=4.0.0,<5.0.0
+
+# Computer vision
+opencv-python>=4.5.0,<5.0.0
+pillow>=8.3.0,<11.0.0
+scikit-image>=0.18.0,<1.0.0
+
+# Audio processing
+librosa>=0.8.0,<1.0.0
+soundfile>=0.10.0,<1.0.0
+
+# Video processing
+moviepy>=1.0.0,<2.0.0
+ffmpeg-python>=0.2.0,<1.0.0
+
+# 3D processing
+trimesh>=3.9.0,<4.0.0
+open3d>=0.13.0,<1.0.0
+
+# Scientific computing
+sympy>=1.8.0,<2.0.0
+sage>=9.0.0,<10.0.0
+
+# Optimization
+cvxpy>=1.2.0,<2.0.0
+pyomo>=6.0.0,<7.0.0
+
+# Differential equations
+sdeint>=0.2.0,<1.0.0
+diffeqpy>=2.0.0,<3.0.0
+
+# Symbolic computation
+sympy>=1.8.0,<2.0.0
+sage>=9.0.0,<10.0.0
+
+# Numerical computing
+numba>=0.54.0,<1.0.0
+cython>=0.29.0,<1.0.0
+
+# Parallel computing
+joblib>=1.0.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+ray>=1.9.0,<3.0.0
+
+# GPU computing
+cupy>=9.0.0,<13.0.0
+numba-cuda>=0.54.0,<1.0.0
+
+# Distributed computing
+dask>=2021.6.0,<2024.0.0
+ray>=1.9.0,<3.0.0
+pyspark>=3.1.0,<4.0.0
+
+# Cloud computing
+boto3>=1.17.0,<2.0.0
+google-cloud>=0.34.0,<1.0.0
+azure>=4.0.0,<6.0.0
+
+# Serverless
+aws-lambda-powertools>=1.25.0,<3.0.0
+google-cloud-functions>=1.8.0,<2.0.0
+
+# Web frameworks
+fastapi>=0.68.0,<1.0.0
+django>=3.2.0,<5.0.0
+flask>=2.0.0,<3.0.0
+
+# API frameworks
+graphene>=3.0.0,<4.0.0
+strawberry-graphql>=0.100.0,<1.0.0
+
+# Database ORMs
+sqlalchemy>=1.4.0,<3.0.0
+django>=3.2.0,<5.0.0
+peewee>=3.14.0,<4.0.0
+
+# NoSQL databases
+pymongo>=3.12.0,<5.0.0
+redis>=3.5.0,<5.0.0
+cassandra-driver>=3.25.0,<4.0.0
+
+# Search engines
+elasticsearch>=7.14.0,<9.0.0
+whoosh>=2.7.0,<3.0.0
+solr>=3.7.0,<4.0.0
+
+# Caching
+redis>=3.5.0,<5.0.0
+memcached>=1.6.0,<2.0.0
+diskcache>=5.4.0,<7.0.0
+
+# Message queues
+pika>=1.2.0,<2.0.0
+kombu>=5.0.0,<6.0.0
+celery>=5.2.0,<6.0.0
+
+# Task scheduling
+apscheduler>=3.7.0,<4.0.0
+crontab>=0.23.0,<1.0.0
+schedule>=1.1.0,<2.0.0
+
+# Email
+smtplib>=1.0.0,<2.0.0
+aiosmtplib>=1.1.0,<3.0.0
+yagmail>=0.14.0,<1.0.0
+
+# SMS
+twilio>=7.0.0,<9.0.0
+nexmo>=2.4.0,<4.0.0
+
+# Push notifications
+pyfcm>=1.5.0,<2.0.0
+onesignal>=1.0.0,<2.0.0
+
+# Web scraping
+beautifulsoup4>=4.9.0,<5.0.0
+scrapy>=2.5.0,<3.0.0
+selenium>=4.0.0,<5.0.0
+
+# Data extraction
+tabula-py>=2.3.0,<3.0.0
+pdfplumber>=0.6.0,<1.0.0
+camelot>=0.9.0,<1.0.0
+
+# Data validation
+great-expectations>=0.13.0,<1.0.0
+pandera>=0.9.0,<1.0.0
+cerberus>=1.3.0,<2.0.0
+
+# Data profiling
+pandas-profiling>=3.0.0,<5.0.0
+sweetviz>=2.1.0,<4.0.0
+
+# Data cleaning
+pyjanitor>=0.22.0,<1.0.0
+dedupe>=2.0.0,<3.0.0
+
+# Data transformation
+pandas>=1.3.0,<2.0.0
+polars>=0.13.0,<1.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data visualization
+plotly>=5.0.0,<6.0.0
+bokeh>=2.4.0,<4.0.0
+altair>=4.1.0,<6.0.0
+
+# Dashboards
+dash>=2.0.0,<3.0.0
+streamlit>=0.84.0,<2.0.0
+panel>=0.12.0,<2.0.0
+
+# Reporting
+reportlab>=3.6.0,<4.0.0
+weasyprint>=54.0.0,<61.0.0
+xhtml2pdf>=0.2.0,<1.0.0
+
+# Spreadsheet processing
+openpyxl>=3.0.0,<4.0.0
+xlsxwriter>=3.0.0,<4.0.0
+xlrd>=2.0.0,<3.0.0
+
+# Document processing
+python-docx>=0.8.11,<1.0.0
+pypdf2>=2.0.0,<4.0.0
+pdfminer-six>=20201018.0.0,<2024.0.0
+
+# Image processing
+pillow>=8.3.0,<11.0.0
+opencv-python>=4.5.0,<5.0.0
+scikit-image>=0.18.0,<1.0.0
+
+# Audio processing
+librosa>=0.8.0,<1.0.0
+soundfile>=0.10.0,<1.0.0
+pydub>=0.25.0,<1.0.0
+
+# Video processing
+moviepy>=1.0.0,<2.0.0
+ffmpeg-python>=0.2.0,<1.0.0
+imageio>=2.9.0,<3.0.0
+
+# Compression
+lz4>=3.1.0,<5.0.0
+zstandard>=0.15.0,<1.0.0
+gzip>=1.0.0,<2.0.0
+
+# Encryption
+cryptography>=3.4.0,<45.0.0
+pycryptodome>=3.10.0,<4.0.0
+bcrypt>=3.2.0,<5.0.0
+
+# Authentication
+authlib>=0.15.0,<2.0.0
+python-jose>=3.3.0,<4.0.0
+passlib>=1.7.0,<2.0.0
+
+# Authorization
+casbin>=4.0.0,<6.0.0
+oslo.policy>=3.0.0,<5.0.0
+
+# API security
+oauthlib>=3.1.0,<4.0.0
+requests-oauthlib>=1.3.0,<2.0.0
+
+# Rate limiting
+ratelimit>=2.2.0,<4.0.0
+flask-limiter>=1.4.0,<3.0.0
+
+# Input validation
+cerberus>=1.3.0,<2.0.0
+jsonschema>=3.2.0,<5.0.0
+marshmallow>=3.12.0,<4.0.0
+
+# Form handling
+wtforms>=2.3.0,<4.0.0
+django-forms>=1.0.0,<2.0.0
+
+# File uploads
+django-storages>=1.11.0,<2.0.0
+boto3>=1.17.0,<2.0.0
+
+# Email validation
+email-validator>=1.1.0,<3.0.0
+validate_email>=1.3.0,<2.0.0
+
+# Phone validation
+phonenumbers>=8.12.0,<9.0.0
+validate-address>=1.0.0,<2.0.0
+
+# URL validation
+validators>=0.18.0,<1.0.0
+url-normalize>=1.4.0,<2.0.0
+
+# Date validation
+python-dateutil>=2.8.0,<3.0.0
+dateparser>=1.1.0,<2.0.0
+
+# Location validation
+geopy>=2.2.0,<3.0.0
+geocoder>=1.38.0,<2.0.0
+
+# Payment processing
+stripe>=2.60.0,<6.0.0
+paypal-checkout-sdk>=1.0.0,<2.0.0
+
+# Shipping
+easyship>=1.0.0,<2.0.0
+fedex>=1.0.0,<2.0.0
+
+# Tax calculation
+taxjar>=2.9.0,<3.0.0
+avalara>=22.0.0,<24.0.0
+
+# Currency conversion
+forex-python>=1.5.0,<2.0.0
+currencyconverter>=0.17.0,<1.0.0
+
+# Stock market
+yfinance>=0.1.0,<1.0.0
+alpha-vantage>=2.3.0,<3.0.0
+
+# Cryptocurrency
+ccxt>=1.50.0,<4.0.0
+web3>=5.0.0,<7.0.0
+
+# Social media
+tweepy>=4.0.0,<5.0.0
+facebook-sdk>=3.1.0,<4.0.0
+
+# Weather
+pyowm>=3.2.0,<4.0.0
+weather-api>=1.0.0,<2.0.0
+
+# Maps and geocoding
+googlemaps>=4.4.0,<5.0.0
+geopy>=2.2.0,<3.0.0
+
+# Machine learning APIs
+google-cloud-ai>=0.10.0,<1.0.0
+azure-cognitiveservices>=3.0.0,<4.0.0
+
+# Translation
+googletrans>=4.0.0,<5.0.0
+deepl>=1.10.0,<2.0.0
+
+# Text analysis
+nltk>=3.6.0,<4.0.0
+spacy>=3.2.0,<4.0.0
+textblob>=0.17.0,<1.0.0
+
+# Sentiment analysis
+vaderSentiment>=3.3.0,<4.0.0
+textblob>=0.17.0,<1.0.0
+
+# Topic modeling
+gensim>=4.1.0,<5.0.0
+scikit-learn>=0.24.2,<2.0.0
+
+# Named entity recognition
+spacy>=3.2.0,<4.0.0
+stanza>=1.3.0,<2.0.0
+
+# Text classification
+transformers>=4.0.0,<5.0.0
+torch>=1.9.0,<3.0.0
+
+# Text generation
+gpt-3>=0.1.0,<2.0.0
+transformers>=4.0.0,<5.0.0
+
+# Text summarization
+sumy>=0.8.0,<1.0.0
+transformers>=4.0.0,<5.0.0
+
+# Question answering
+haystack>=1.11.0,<3.0.0
+transformers>=4.0.0,<5.0.0
+
+# Image recognition
+pillow>=8.3.0,<11.0.0
+opencv-python>=4.5.0,<5.0.0
+scikit-image>=0.18.0,<1.0.0
+
+# Object detection
+yolov5>=6.0.0,<8.0.0
+detectron2>=0.5.0,<1.0.0
+
+# Face recognition
+face-recognition>=1.3.0,<2.0.0
+deepface>=0.0.75,<1.0.0
+
+# Image segmentation
+segmentation-models>=1.0.0,<2.0.0
+detectron2>=0.5.0,<1.0.0
+
+# Image generation
+stable-diffusion>=1.0.0,<3.0.0
+dall-e>=1.0.0,<2.0.0
+
+# Audio recognition
+librosa>=0.8.0,<1.0.0
+speechrecognition>=3.8.0,<4.0.0
+
+# Speech synthesis
+gTTS>=2.2.0,<3.0.0
+pyttsx3>=2.90.0,<3.0.0
+
+# Video analysis
+moviepy>=1.0.0,<2.0.0
+opencv-python>=4.5.0,<5.0.0
+
+# Recommendation systems
+surprise>=1.1.0,<2.0.0
+lightfm>=1.16.0,<2.0.0
+
+# Anomaly detection
+pyod>=1.0.0,<2.0.0
+luminol>=0.5.0,<1.0.0
+
+# Time series forecasting
+prophet>=1.0.0,<2.0.0
+statsforecast>=0.7.0,<2.0.0
+
+# Clustering
+scikit-learn>=0.24.2,<2.0.0
+hdbscan>=0.8.0,<1.0.0
+
+# Dimensionality reduction
+scikit-learn>=0.24.2,<2.0.0
+umap-learn>=0.5.0,<1.0.0
+
+# Feature selection
+scikit-learn>=0.24.2,<2.0.0
+boruta>=0.3.0,<1.0.0
+
+# Model interpretation
+shap>=0.39.0,<1.0.0
+eli5>=0.11.0,<1.0.0
+lime>=0.2.0,<1.0.0
+
+# AutoML
+auto-sklearn>=0.14.0,<1.0.0
+tpot>=0.11.0,<1.0.0
+
+# Hyperparameter optimization
+optuna>=2.10.0,<4.0.0
+hyperopt>=0.2.0,<1.0.0
+
+# Neural architecture search
+auto-keras>=1.0.0,<2.0.0
+nni>=2.0.0,<4.0.0
+
+# Model deployment
+bentoml>=1.0.0,<2.0.0
+seldon-core>=1.12.0,<2.0.0
+
+# Model monitoring
+evidently>=0.1.0,<1.0.0
+whylogs>=1.0.0,<2.0.0
+
+# Data drift detection
+evidently>=0.1.0,<1.0.0
+alibi-detect>=0.9.0,<1.0.0
+
+# Model versioning
+mlflow>=1.20.0,<3.0.0
+dvc>=2.0.0,<4.0.0
+
+# Experiment tracking
+wandb>=0.12.0,<1.0.0
+comet-ml>=3.0.0,<4.0.0
+
+# Pipeline orchestration
+prefect>=1.0.0,<3.0.0
+dagster>=0.14.0,<2.0.0
+
+# Data versioning
+dvc>=2.0.0,<4.0.0
+git-lfs>=2.13.0,<4.0.0
+
+# Feature store
+feast>=0.20.0,<1.0.0
+hopsworks>=3.0.0,<4.0.0
+
+# Data catalog
+amundsen>=5.0.0,<7.0.0
+datahub>=0.9.0,<1.0.0
+
+# Data lineage
+marquez>=0.25.0,<1.0.0
+openlineage>=0.15.0,<1.0.0
+
+# Data quality
+great-expectations>=0.13.0,<1.0.0
+soda-core>=3.0.0,<4.0.0
+
+# Data governance
+collibra>=1.0.0,<2.0.0
+alation>=1.0.0,<2.0.0
+
+# Data privacy
+presidio>=2.0.0,<3.0.0
+anonypy>=0.2.0,<1.0.0
+
+# Data security
+vault>=3.0.0,<4.0.0
+aws-kms>=1.0.0,<2.0.0
+
+# Data backup
+boto3>=1.17.0,<2.0.0
+google-cloud-storage>=1.42.0,<3.0.0
+
+# Data recovery
+boto3>=1.17.0,<2.0.0
+google-cloud-storage>=1.42.0,<3.0.0
+
+# Data archiving
+boto3>=1.17.0,<2.0.0
+google-cloud-storage>=1.42.0,<3.0.0
+
+# Data retention
+boto3>=1.17.0,<2.0.0
+google-cloud-storage>=1.42.0,<3.0.0
+
+# Data deletion
+boto3>=1.17.0,<2.0.0
+google-cloud-storage>=1.42.0,<3.0.0
+
+# Data compression
+lz4>=3.1.0,<5.0.0
+zstandard>=0.15.0,<1.0.0
+
+# Data encryption
+cryptography>=3.4.0,<45.0.0
+pycryptodome>=3.10.0,<4.0.0
+
+# Data masking
+presidio>=2.0.0,<3.0.0
+anonypy>=0.2.0,<1.0.0
+
+# Data tokenization
+tokenizers>=0.12.0,<1.0.0
+transformers>=4.0.0,<5.0.0
+
+# Data normalization
+scikit-learn>=0.24.2,<2.0.0
+pandas>=1.3.0,<2.0.0
+
+# Data standardization
+scikit-learn>=0.24.2,<2.0.0
+pandas>=1.3.0,<2.0.0
+
+# Data scaling
+scikit-learn>=0.24.2,<2.0.0
+pandas>=1.3.0,<2.0.0
+
+# Data transformation
+scikit-learn>=0.24.2,<2.0.0
+pandas>=1.3.0,<2.0.0
+
+# Data aggregation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data filtering
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sorting
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data grouping
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data merging
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data joining
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data concatenation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data pivoting
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data melting
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data reshaping
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data stacking
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data unstacking
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data transposing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data indexing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data slicing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data dicing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sampling
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data partitioning
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sharding
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data replication
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data synchronization
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data backup
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data restore
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data migration
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data import
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data export
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data loading
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data saving
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data streaming
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data batching
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data caching
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data prefetching
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data lazy loading
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data eager loading
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data parallel processing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data distributed processing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data GPU processing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data multi-threading
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data multiprocessing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data async processing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data real-time processing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data batch processing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data stream processing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data event processing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data complex event processing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data windowing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sessionization
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data funnel analysis
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data cohort analysis
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data retention analysis
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data churn analysis
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data segmentation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data profiling
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data quality assessment
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data validation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data cleaning
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data enrichment
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data augmentation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data synthesis
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data generation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data simulation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data modeling
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data analysis
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data visualization
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data reporting
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data dashboarding
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data alerting
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data monitoring
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data observability
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data governance
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data compliance
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data security
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data privacy
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data ethics
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sustainability
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data accessibility
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data usability
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data interoperability
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data portability
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data reusability
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data discoverability
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data shareability
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data collaboration
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data communication
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data documentation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data metadata
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data cataloging
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data indexing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data searching
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data discovery
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data exploration
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data experimentation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data testing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data validation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data verification
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data certification
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data accreditation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data standardization
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data normalization
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data harmonization
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data integration
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data consolidation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data aggregation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data summarization
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data rollup
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data drilldown
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data drillthrough
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data slicer
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data dicer
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data pivot
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data unpivot
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data melt
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data cast
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data transform
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data map
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data reduce
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data fold
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data unfold
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data group
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data ungroup
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data aggregate
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data disaggregate
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data summarize
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data detail
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data expand
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data contract
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data distribute
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data collect
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data gather
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data assemble
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data disassemble
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data reassemble
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data combine
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data split
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data partition
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data shard
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data replicate
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data duplicate
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data deduplicate
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data unique
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data distinct
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data filter
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data select
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data project
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data join
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data merge
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data union
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data intersect
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data except
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data concatenate
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data append
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data prepend
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data insert
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data update
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data delete
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data upsert
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data replace
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data overwrite
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data backup
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data restore
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data archive
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data compress
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data decompress
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data encrypt
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data decrypt
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data hash
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data checksum
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data signature
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data verify
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data authenticate
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data authorize
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data audit
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data log
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data track
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data trace
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data monitor
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data alert
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data notify
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data report
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data visualize
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data dashboard
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data analytics
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data insights
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data predictions
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data forecasts
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data recommendations
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data suggestions
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data advice
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data guidance
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data direction
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data strategy
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data planning
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data roadmap
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data vision
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data mission
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data goals
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data objectives
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data targets
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data milestones
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data achievements
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data success
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data failure
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data lessons
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data improvements
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data innovations
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data breakthroughs
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data discoveries
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data findings
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data results
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data outcomes
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data impacts
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data benefits
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data value
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data worth
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data importance
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data significance
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data relevance
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data utility
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data usefulness
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data applicability
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data suitability
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data fitness
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data readiness
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data preparedness
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data maturity
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sophistication
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data advancement
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data progress
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data development
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data growth
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data evolution
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data transformation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data revolution
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data innovation
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data creativity
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data imagination
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data inspiration
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data aspiration
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data ambition
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data dream
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data vision
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data future
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data tomorrow
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data horizon
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data frontier
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data edge
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data boundary
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data limit
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data scope
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data scale
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data size
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data magnitude
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data extent
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data reach
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data span
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data range
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data spectrum
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data variety
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data diversity
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data heterogeneity
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data complexity
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data simplicity
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data elegance
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data beauty
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data art
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data science
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data engineering
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data analysis
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data analytics
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data mining
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data warehousing
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data lakes
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data ponds
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data swamps
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data oceans
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data streams
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data rivers
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data floods
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data tsunamis
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data hurricanes
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data tornados
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data earthquakes
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data volcanoes
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data mountains
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data valleys
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data plains
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data deserts
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data forests
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data jungles
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data gardens
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data farms
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data orchards
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data vineyards
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data plantations
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data fields
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data meadows
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data parks
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data reserves
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sanctuaries
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data havens
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data shelters
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data refuges
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data safehouses
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data vaults
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data repositories
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data archives
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data libraries
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data museums
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data galleries
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data exhibitions
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data showcases
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data demonstrations
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data presentations
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data performances
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data shows
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data displays
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data exhibitions
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data fairs
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data festivals
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data celebrations
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data ceremonies
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data rituals
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data traditions
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data customs
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data practices
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data habits
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data routines
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data patterns
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data trends
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data fashions
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data styles
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data approaches
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data methods
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data techniques
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data strategies
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data tactics
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data plans
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data schemes
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data programs
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data projects
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data initiatives
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data campaigns
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data movements
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data revolutions
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data evolutions
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data transformations
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data metamorphoses
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data transmutations
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data alchemy
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data magic
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data wizardry
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sorcery
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data enchantment
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data spells
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data incantations
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data charms
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data talismans
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data amulets
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data relics
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data artifacts
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data treasures
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data gems
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data jewels
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data diamonds
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data pearls
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data rubies
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sapphires
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data emeralds
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data gold
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data silver
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data bronze
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data copper
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data iron
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data steel
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data titanium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data platinum
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data uranium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data plutonium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data hydrogen
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data helium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data lithium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data beryllium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data boron
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data carbon
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data nitrogen
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data oxygen
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data fluorine
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data neon
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sodium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data magnesium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data aluminum
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data silicon
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data phosphorus
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data sulfur
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data chlorine
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data argon
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data potassium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data calcium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data scandium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data titanium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data vanadium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data chromium
+pandas>=1.3.0,<2.0.0
+dask>=20221.6.0,<2024.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data manganese
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data iron
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data cobalt
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data nickel
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data copper
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data zinc
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data gallium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data germanium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data arsenic
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data selenium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data bromine
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data krypton
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data rubidium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data strontium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data yttrium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data zirconium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data niobium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data molybdenum
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data technetium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data ruthenium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data rhodium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data palladium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data silver
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data cadmium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data indium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data tin
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data antimony
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data tellurium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data iodine
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data xenon
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data cesium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data barium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data lanthanum
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data cerium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data praseodymium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data neodymium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data promethium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data samarium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data europium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data gadolinium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data terbium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data dysprosium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data holmium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data erbium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data thulium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data ytterbium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data lutetium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data hafnium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data tantalum
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data tungsten
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data rhenium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data osmium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data iridium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data platinum
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data gold
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data mercury
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data thallium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data lead
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data bismuth
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data polonium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data astatine
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data radon
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data francium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data radium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data actinium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data thorium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data protactinium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data uranium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data neptunium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data plutonium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data americium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data curium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data berkelium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data californium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data einsteinium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data fermium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data mendelevium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data nobelium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data lawrencium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data rutherfordium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data dubnium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data seaborgium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>
+
+# Data bohrium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data hassium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0
+
+# Data meitnerium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>
+
+# Data darmstadtium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>
+
+# Data roentgenium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>
+
+# Data copernicium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>
+
+# Data nihonium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>
+
+# Data flerovium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>
+
+# Data moscovium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>
+
+# Data livermorium
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>
+
+# Data tennessine
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>
+
+# Data oganesson
+pandas>=1.3.0,<2.0.0
+dask>=2021.6.0,<2024.0.0>

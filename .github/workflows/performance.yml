@@ -1,0 +1,163 @@
+name: Performance Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'tests/performance/**'
+      - 'config/**'
+      - 'utils/**'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'tests/performance/**'
+      - 'config/**'
+      - 'utils/**'
+  schedule:
+    # Run performance tests daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || contains(github.event.pull_request.labels.*.name, 'performance')
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.9"
+
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r config/requirements.txt
+        pip install pytest pytest-cov pytest-xvdist pytest-benchmark psutil
+        pip install -e .
+
+    - name: Run performance benchmarks
+      run: |
+        pytest tests/performance/ -v -m performance --benchmark-only --benchmark-json=benchmark.json --benchmark-min-rounds=5
+
+    - name: Process benchmark results
+      run: |
+        python -c "
+        import json
+        import sys
+        with open('benchmark.json', 'r') as f:
+            data = json.load(f)
+
+        # Extract key metrics
+        benchmarks = data.get('benchmarks', {})
+        results = {}
+
+        for name, benchmark in benchmarks.items():
+            if 'stats' in benchmark:
+                stats = benchmark['stats']
+                results[name] = {
+                    'mean': stats.get('mean', 0),
+                    'std': stats.get('std', 0),
+                    'min': stats.get('min', 0),
+                    'max': stats.get('max', 0),
+                    'rounds': stats.get('rounds', 0),
+                    'unit': benchmark.get('unit', 'seconds')
+                }
+
+        # Save processed results
+        with open('benchmark_results.json', 'w') as f:
+            json.dump(results, f, indent=2)
+
+        print(f'Processed {len(results)} benchmark results')
+        "
+
+    - name: Upload benchmark results
+      uses: actions/upload-artifact@v3
+      with:
+        name: benchmark-results
+        path: |
+          benchmark.json
+          benchmark_results.json
+
+    - name: Store benchmark result
+      uses: benchmark-action/github-action-benchmark@v1
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      with:
+        tool: 'pytest'
+        output-file-path: benchmark.json
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        auto-push: true
+        comment-on-alert: true
+        alert-threshold: '200%'
+        fail-on-alert: true
+
+    - name: Performance Regression Check
+      run: |
+        python -c "
+        import json
+        import sys
+
+        # Load current benchmarks
+        with open('benchmark.json', 'r') as f:
+            current_data = json.load(f)
+
+        # Define performance thresholds (in seconds)
+        thresholds = {
+            'test_config_performance.py::test_parameter_creation_performance': 1.0,
+            'test_config_performance.py::test_config_file_io_performance': 0.5
+        }
+
+        # Check against thresholds
+        failed_checks = []
+        benchmarks = current_data.get('benchmarks', {})
+
+        for benchmark_name, threshold in thresholds.items():
+            if benchmark_name in benchmarks:
+                benchmark = benchmarks[benchmark_name]
+                stats = benchmark.get('stats', {})
+                mean_time = stats.get('mean', 0)
+
+                if mean_time > threshold:
+                    failed_checks.append({
+                        'benchmark': benchmark_name,
+                        'threshold': threshold,
+                        'actual': mean_time,
+                        'ratio': mean_time / threshold
+                    })
+
+        # Report results
+        if failed_checks:
+            print('Performance regression detected:')
+            for check in failed_checks:
+                print(f'  {check[\"benchmark\"]}: {check[\"actual\"]:.3f}s (threshold: {check[\"threshold\"]:.3f}s, ratio: {check[\"ratio\"]:.2f}x)')
+            sys.exit(1)
+        else:
+            print('All performance checks passed')
+        "
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: [benchmark]
+    if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+
+    steps:
+    - name: Notify on performance test results
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const benchmarkResult = '${{ needs.benchmark.result }}';
+
+          let status = 'Performance tests completed:\n';
+          status += `- Benchmark: ${benchmarkResult}\n`;
+
+          console.log(status);

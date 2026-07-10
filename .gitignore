@@ -1,0 +1,66 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+
+# Runtime and local outputs
+logs/
+*.log
+*.log.*
+benchmark_results/
+profile.stats
+experiments.db
+experiments.db.backup
+
+# Generated top-level analysis outputs
+/enhanced_optimization_results_*.json
+/enhanced_optimization_validation_data.csv
+/enhanced_simulation_data.csv
+/optimized_simulation_data.csv
+/manuscript_simulation_data.csv
+/validation_metrics.json
+/nivolumab_validation_results_*.json
+/nivolumab_optimization_results_*.json
+/nivolumab_full_model_optimization_*.json
+/nivolumab_optimization_intermediate.json
+/sensitivity_analysis_*.png
+/validation_*.png
+/optimized_vs_original_comparison.png
+/full_model_validation_report_*.md
+/MANUSCRIPT_QSP_Checkpoint_Inhibitor_Hypothyroidism.html
+
+# Documentation build outputs
+docs/_build/
+docs/api/modules.rst
+
+# Local environment files
+.env
+.env.*
+.venv/
+venv/
+env/
+ENV/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# v1 pipeline generated outputs (regenerable via scripts/run_v1_pipeline.py)
+/results/v1/*
+!/results/v1/.gitkeep
+!/results/v1/README.md

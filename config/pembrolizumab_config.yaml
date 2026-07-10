@@ -1,0 +1,64 @@
+CL: 0.22
+EC50_IFN_death: 85.0
+HLA_factor: 1.0
+Hill_IFN: 1.2
+Kd: 3.2
+Kd_pembro_PD1: 3.2
+T3_set: 4.8
+T4_set: 12.0
+TPO_Ab_titer: 0.0
+TSH_set: 1.5
+T_eff0: 1500.0
+Thyro_max: 1.0
+V: 6.0
+activation_threshold: 4965.096816
+age_factor: 1.0
+alpha: 0.0004
+author: QSP Team
+base_damage_threshold: 0.025
+beta: 0.12
+created_at: '2024-01-01T00:00:00'
+cytokine_threshold_pg_ml: 120.0
+damage_accumulation_rate: 800000.0
+damage_decay_rate: 0.0005
+damage_ramp_time: 30.0
+damage_threshold_growth_rate: 5.0e-05
+delta: 0.005
+description: Optimized parameters for pembrolizumab-induced hypothyroidism modeling
+dose_mg_kg: 2
+dosing_interval: 14
+drug_activation_thresholds:
+  atezolizumab: 45000.0
+  durvalumab: 35000.0
+  nivolumab: 6647.704061
+  pembrolizumab: 5823.449089
+drug_clearance: 0.2
+drug_susceptibility_rates:
+  atezolizumab: 0.269132
+  durvalumab: 0.208605
+  nivolumab: 0.260856
+  pembrolizumab: 0.338350
+drug_volume: 6.0
+epsilon: 2.0
+gamma: 1.0
+immune_memory_factor: 1.1
+initial_regeneration_capacity: 0.055
+k_clear_IFN: 1.2
+k_death: 0.008
+k_deg_T3: 0.693
+k_deg_T4: 0.099
+k_metab_TSH: 0.05
+k_regen: 0.055
+k_syn_T3: 3.0
+k_syn_T4: 14.0
+memory_accumulation_rate: 0.0005
+min_regeneration_capacity: 0.02
+minimum_exposure_days: 45.0
+parameter_type: PembrolizumabParameters
+potency: 1.052918
+regeneration_decline_rate: 0.0004
+sex_factor: 1.0
+susceptibility_rate: 0.43168
+theta: 0.1
+updated_at: '2024-01-01T00:00:00'
+version: 1.0.0
